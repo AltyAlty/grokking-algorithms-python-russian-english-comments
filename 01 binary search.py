@@ -34,7 +34,7 @@ def binary_search(search_list, number):
         # то функция "binary_search" возвращает индекс этого среднего элемента списка.
         # Ключевое слово "return" выходит из функции и возвращает какое-либо значение.
         # ----------
-        # If the value of the middle element of the list is equal the number that we are trying to find
+        # If the value of the middle element of the list is equal the number that we try to find
         # then the function "binary_search" returns the index of this middle element of the list.
         # The keyword "return" is to exit a function and return a value.
         if guess == number:
@@ -43,7 +43,7 @@ def binary_search(search_list, number):
         # то верхняя граница области поиска становится равной на одну позицию меньше,
         # чем индекс этого среднего элемента списка.
         # ----------
-        # If the value of the middle element of the list is more than the number that we are trying to find
+        # If the value of the middle element of the list is more than the number that we try to find
         # then the upper bound of the search area is one position less
         # than the index of this middle element of the list.
         if guess > number:
@@ -52,7 +52,7 @@ def binary_search(search_list, number):
         # то нижняя граница области поиска становится равной на одну позицию больше,
         # чем индекс этого среднего элемента списка.
         # ----------
-        # Otherwise, if the value of the middle element of the list is less than the number that we are trying to find
+        # Otherwise, if the value of the middle element of the list is less than the number that we try to find
         # then the lower bound of the search area is one position more
         # than the index of this middle element of the list.
         else:
@@ -63,7 +63,7 @@ def binary_search(search_list, number):
     # "None" означает nil (ничто) в Python. Используем, чтобы определять, что значения нет в списке.
     # ----------
     # If the number to find is not in the list (condition "low <= high" is false)
-    # the the function "binary_search" returns value "None".
+    # then the function "binary_search" returns value "None".
     # "None" means nil (nothing) in Python. We use it to define than the number to find is not in the list.
     return None
 
@@ -73,12 +73,14 @@ def binary_search(search_list, number):
 # Creating the list of numbers "my_list".
 my_list = [1, 3, 5, 7, 9]
 
-# Пытаемся найти число, которое находится в списке "my_list".
+# Пытаемся найти индекс элемента, который находится в списке "my_list".
+# Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
-# Trying to find the number that is in the list "my_list".
+# Trying to find the index of the element that is in the list "my_list".
+# The function "print()" prints the specified message to the screen, or other standard output device.
 print(binary_search(my_list, 7))
 
-# Пытаемся найти число, которое не находится в списке "my_list".
+# Пытаемся найти индекс элемента, который не находится в списке "my_list".
 # ----------
-# Trying to find the number that is not in the list "my_list".
+# Trying to find the index of the element that is not in the list "my_list".
 print(binary_search(my_list, 8))
