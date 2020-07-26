@@ -67,7 +67,6 @@ def selection_sort(list_to_sort):
     # The variable "new_list" is used to store the sorted list in ascending order.
     # Initially the variable "new_list" contains an empty list.
     new_list = []
-
     # Создаем цикл for, в котором перебираем все элементы списка.
     # ----------
     # Creating the for loop in which we iterate over all the elements of the list.

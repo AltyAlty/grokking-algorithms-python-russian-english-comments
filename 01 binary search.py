@@ -15,7 +15,6 @@ def binary_search(search_list, number):
     # The variables "low" and "high" store the bounds of the search area.
     low = 0
     high = len(search_list) - 1
-
     # Создаем цикл while, который работает пока нижняя граница списка меньше или равна верхней границе этого списка.
     # После выполнения одного из условий, область поиска уменьшается и цикл while начинает работу сначала.
     # ----------
@@ -57,7 +56,6 @@ def binary_search(search_list, number):
         # than the index of this middle element of the list.
         else:
             low = mid + 1
-
     # Если число для поиска отсуствует в списке (условие "low <= high" не является верным),
     # то функция "binary_search" возвращает значение "None".
     # "None" означает nil (ничто) в Python. Используем, чтобы определять, что значения нет в списке.
