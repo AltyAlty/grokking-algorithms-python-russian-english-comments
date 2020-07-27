@@ -32,7 +32,7 @@ def countdown(i):
     # Create the recursive case.
     # The recursive case in a recursive function is a part of the function code
     # in which the function calls itself in order to perform a task.
-    # Print the number to the screen using method "print()" and recursively call the function "countdown"
+    # Print the number to the screen using the function "print()" and recursively call the function "countdown"
     # with the parameter decreased by 1. This is our recursive case.
     # When the parameter of the function "countdown" is less than 0
     # then the base case is triggered and the function exits.
