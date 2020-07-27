@@ -12,7 +12,7 @@
 # Создаем функцию "find_smallest", которая принимает один входной параметр:
 # список "list_to_sort", который содержит числа. Эта функция возвращает индекс наименьшего элемента в списке.
 # ----------
-# Creating the function "find_smallest" that accepts one parameter - the list "list_to_sort" that contains the numbers.
+# Create the function "find_smallest" that accepts one parameter: the list "list_to_sort" that contains the numbers.
 # This function returns the index of the smallest number in the list.
 def find_smallest(list_to_sort):
     # Переменная "smallest" используется для хранения наименьшего элемента в списке.
@@ -32,7 +32,7 @@ def find_smallest(list_to_sort):
     # Функция "range()" возвращает последовательность чисел, за исключением последнего число.
     # Функция "len()" возвращает количество элементов в списке.
     # ----------
-    # Creating the for loop in which we iterate over all the elements of the list, except for the element at index "0",
+    # Create the for loop in which we iterate over all the elements of the list, except for the element at index "0",
     # and comparing these elements with the element at index "0".
     # The function "range()" returns a sequence of numbers excluding the last number.
     # The function "len()" returns the number of elements in a list.
@@ -58,7 +58,7 @@ def find_smallest(list_to_sort):
 # Создаем функцию "selection_sort", которая принимает один входной параметр:
 # список "list_to_sort", который содержит числа. Эта функция возвращает отсортированный список по возрастанию.
 # ----------
-# Creating the function "selection_sort" that accepts one parameter - the list "search_list" that contains the numbers.
+# Create the function "selection_sort" that accepts one parameter: the list "search_list" that contains the numbers.
 # This function returns the sorted list in ascending order.
 def selection_sort(list_to_sort):
     # Переменная "new_list" используется для хранения отсортированного списка по возрастанию.
@@ -69,12 +69,12 @@ def selection_sort(list_to_sort):
     new_list = []
     # Создаем цикл for, в котором перебираем все элементы списка.
     # ----------
-    # Creating the for loop in which we iterate over all the elements of the list.
+    # Create the for loop in which we iterate over all the elements of the list.
     for i in range(len(list_to_sort)):
         # Вызываем функцию "find_smallest", чтобы найти индекс наименьшего элемента в списке.
         # Переменная "smallest" хранит этот индекс наименьшего элемента в списке.
         # ----------
-        # Calling the function "find_smallest" to find the index of the smallest element in the list.
+        # Call the function "find_smallest" to find the index of the smallest element in the list.
         # The variable "smallest" stores this index of the smallest element in the list.
         smallest = find_smallest(list_to_sort)
         # Убираем элемент с индексом "smallest" из списка "list_to_sort" при помощи метода "pop".
@@ -82,9 +82,9 @@ def selection_sort(list_to_sort):
         # Добавляем в конец списка "new_list" полученный от метода "pop" элемент при помощи метода "append".
         # Затем цикл for начинает работа сначала с уменьшенным списком "list_to_sort".
         # ----------
-        # Removing the element at index "smallest" from the list "list_to_sort" using the method "pop".
+        # Remove the element at index "smallest" from the list "list_to_sort" using the method "pop".
         # Also the method "pop" returns the removed element.
-        # Adding the element received from the method "pop" to the end of the list "new_list" using the method "append".
+        # Add the element received from the method "pop" to the end of the list "new_list" using the method "append".
         # Then the for loop starts over with the reduced list "list_to_sort".
         new_list.append(list_to_sort.pop(smallest))
     # В результате работы цикла for функция "selection_sort" возвращает переменную "new_list",
@@ -98,6 +98,6 @@ def selection_sort(list_to_sort):
 # Пытаемся отсортировать список [5, 3, 6, 2, 10] по возрастанию.
 # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
-# Trying to sort the list [5, 3, 6, 2, 10] in ascending order.
+# Try to sort the list [5, 3, 6, 2, 10] in ascending order.
 # The function "print()" prints the specified message to the screen, or other standard output device.
 print(selection_sort([5, 3, 6, 2, 10]))

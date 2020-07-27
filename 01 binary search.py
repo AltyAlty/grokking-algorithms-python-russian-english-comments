@@ -6,7 +6,7 @@
 # Создаем функцию "binary_search", которая принимает два входных параметра:
 # список "search_list" и число для поиска "number". Эта функция возвращает индекс элемента.
 # ----------
-# Creating the function "binary_search" that accepts two parameters - the number to find "number"
+# Create the function "binary_search" that accepts two parameters: the number to find "number"
 # and the list "search_list" that contains this number.
 # This function returns the index of the element.
 def binary_search(search_list, number):
@@ -18,14 +18,14 @@ def binary_search(search_list, number):
     # Создаем цикл while, который работает пока нижняя граница списка меньше или равна верхней границе этого списка.
     # После выполнения одного из условий, область поиска уменьшается и цикл while начинает работу сначала.
     # ----------
-    # Creating the while loop that works as long as
+    # Create the while loop that works as long as
     # the lower bound of the list is equal or less than the upper bound of the list.
     # If one of the conditions below is true, the search area decreases and the while loop starts over.
     while low <= high:
         # Находим средний элемент списка. Переменная "mid" - индекс среднего элемента.
         # Переменная "guess" - значение по этому индексу. Индекс среднего элемента округляется в меньшую сторону.
         # ----------
-        # Trying to find the middle element of the list. The variable "mid" is the index of the middle element.
+        # Find the middle element of the list. The variable "mid" is the index of the middle element.
         # The variable "guess" is the value of the middle element. The value of the variable "mid" is rounded down.
         mid = (low + high) // 2
         guess = search_list[mid]
@@ -68,17 +68,17 @@ def binary_search(search_list, number):
 
 # Создаем список чисел "my_list".
 # ----------
-# Creating the list of numbers "my_list".
+# Create the list of numbers "my_list".
 my_list = [1, 3, 5, 7, 9]
 
 # Пытаемся найти индекс элемента, который находится в списке "my_list".
 # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
-# Trying to find the index of the element that is in the list "my_list".
+# Try to find the index of the element that is in the list "my_list".
 # The function "print()" prints the specified message to the screen, or other standard output device.
 print(binary_search(my_list, 7))
 
 # Пытаемся найти индекс элемента, который не находится в списке "my_list".
 # ----------
-# Trying to find the index of the element that is not in the list "my_list".
+# Try to find the index of the element that is not in the list "my_list".
 print(binary_search(my_list, 8))
