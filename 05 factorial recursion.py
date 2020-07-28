@@ -53,6 +53,8 @@ def fact(x):
 
 
 # Пытаемся найти факториал от числа 4.
+# Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
 # Try to find the factorial of 4.
+# The function "print()" prints the specified message to the screen, or other standard output device.
 print(fact(4))
