@@ -10,9 +10,9 @@
 # and the list "search_list" that contains this number.
 # This function returns the index of the element.
 def binary_search(search_list, number):
-    # В переменных "low" и "high" хранятся границы области поиска.
+    # В переменных "low" и "high" хранятся границы области поиска в списке.
     # ----------
-    # The variables "low" and "high" store the bounds of the search area.
+    # The variables "low" and "high" store the bounds of the search area in the list.
     low = 0
     high = len(search_list) - 1
     # Создаем цикл while, который работает пока нижняя граница списка меньше или равна верхней границе этого списка.
@@ -20,7 +20,7 @@ def binary_search(search_list, number):
     # ----------
     # Create the while loop that works as long as
     # the lower bound of the list is equal or less than the upper bound of the list.
-    # If one of the conditions below is true, the search area decreases and the while loop starts over.
+    # If one of the conditions below is true, then the search area decreases and the while loop starts over.
     while low <= high:
         # Находим средний элемент списка. Переменная "mid" - индекс среднего элемента.
         # Переменная "guess" - значение по этому индексу. Индекс среднего элемента округляется в меньшую сторону.
@@ -33,7 +33,7 @@ def binary_search(search_list, number):
         # то функция "binary_search" возвращает индекс этого среднего элемента списка.
         # Ключевое слово "return" выходит из функции и возвращает какое-либо значение.
         # ----------
-        # If the value of the middle element of the list is equal the number that we try to find
+        # If the value of the middle element of the list is equal the number that we try to find,
         # then the function "binary_search" returns the index of this middle element of the list.
         # The keyword "return" is to exit a function and return a value.
         if guess == number:
@@ -42,7 +42,7 @@ def binary_search(search_list, number):
         # то верхняя граница области поиска становится равной на одну позицию меньше,
         # чем индекс этого среднего элемента списка.
         # ----------
-        # If the value of the middle element of the list is more than the number that we try to find
+        # If the value of the middle element of the list is more than the number that we try to find,
         # then the upper bound of the search area is one position less
         # than the index of this middle element of the list.
         if guess > number:
@@ -51,18 +51,18 @@ def binary_search(search_list, number):
         # то нижняя граница области поиска становится равной на одну позицию больше,
         # чем индекс этого среднего элемента списка.
         # ----------
-        # Otherwise, if the value of the middle element of the list is less than the number that we try to find
+        # Otherwise, if the value of the middle element of the list is less than the number that we try to find,
         # then the lower bound of the search area is one position more
         # than the index of this middle element of the list.
         else:
             low = mid + 1
     # Если число для поиска отсуствует в списке (условие "low <= high" не является верным),
-    # то функция "binary_search" возвращает значение "None".
+    # то функция "binary_search" возвращает "None".
     # "None" означает nil (ничто) в Python. Используем, чтобы определять, что значения нет в списке.
     # ----------
-    # If the number to find is not in the list (condition "low <= high" is false)
-    # then the function "binary_search" returns value "None".
-    # "None" means nil (nothing) in Python. We use it to define than the number to find is not in the list.
+    # If the number to find is not in the list (the condition "low <= high" is false),
+    # then the function "binary_search" returns "None".
+    # "None" means nil (nothing) in Python. We use it to define that the number to find is not in the list.
     return None
 
 

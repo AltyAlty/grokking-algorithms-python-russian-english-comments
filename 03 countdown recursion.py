@@ -18,7 +18,7 @@ def countdown(i):
     # Create the base case.
     # The base case in a recursive function is a part of the function code that describes
     # the condition for the termination of the function in order to prevent loops.
-    # If there is no seconds to count down then we exit the function. This is our base case.
+    # If there is no seconds to count down, then we exit the function. This is our base case.
     # The keyword "return" is to exit a function and return a value.
     if i < 0:
         return
@@ -34,7 +34,7 @@ def countdown(i):
     # in which the function calls itself in order to perform a task.
     # Print the number to the screen using the function "print()" and recursively call the function "countdown"
     # with the parameter decreased by 1. This is our recursive case.
-    # When the parameter of the function "countdown" is less than 0
+    # When the parameter of the function "countdown" is less than 0,
     # then the base case is triggered and the function exits.
     else:
         print(i)

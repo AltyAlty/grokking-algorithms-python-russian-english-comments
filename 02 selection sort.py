@@ -41,7 +41,7 @@ def find_smallest(list_to_sort):
         # то этот элемент становится новым наименьшим элементом в списке.
         # Остальные элемента списка сравниваются с этим новым наименьшим элементом в списке.
         # ----------
-        # If we find the element that is less than the element at index "0"
+        # If we find the element that is less than the element at index "0",
         # then this element becomes the new smallest element in the list.
         # The rest elements of the list are compared with this new smallest element of the list.
         if list_to_sort[i] < smallest:
