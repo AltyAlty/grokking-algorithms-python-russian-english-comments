@@ -24,7 +24,7 @@ def fact(x):
     # If one of the recursively called copies of the function "fact" calculates the factorial of the number 1,
     # then we exit this recursively called copy of the function "fact" and it returns the number "1" to
     # the previous copy of the function "fact" in the call stack.
-    # If the function "fact" is initially called with a parameter of 1,
+    # If the function "fact" is initially called with the parameter of 1,
     # then the function "fact" immediately returns the number 1, since the factorial of the number 1 is 1.
     # The keyword "return" is to exit a function and return a value.
     if x == 1:
@@ -44,7 +44,7 @@ def fact(x):
     # in which the function calls itself in order to perform a task.
     # Recursively call a copy of the function "fact" with the parameter decreased by 1,
     # the result of which is multiplied by the value of the parameter of the current copy of the function "fact".
-    # When a copy of the function "fact" is recursively called with a parameter of 1, then the base case is triggered.
+    # When a copy of the function "fact" is recursively called with the parameter of 1, then the base case is triggered.
     # The copies of the function "fact" in the call stack terminate one by one and return their calculated values
     # to the previous recursively called copies of the function "fact"
     # until the very first called function "fact" exits.
