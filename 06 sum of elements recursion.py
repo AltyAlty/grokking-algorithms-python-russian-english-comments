@@ -4,10 +4,10 @@
 
 
 # Создаем функцию "sum_of_elem", которая принимает один входной параметр:
-# список "list_of_elem", содержащий элементы, сумму которых необходимо вычислить.
+# список "list_of_elem", содержащий элементы для суммирования.
 # ----------
 # Create the function "sum_of_elem" that accepts one parameter:
-# the list "list_of_elem" containing the elements to be summed.
+# the list "list_of_elem" containing the elements to add.
 def sum_of_elem(list_of_elem):
     # Создаем базовый случай.
     # Базовый случай в рекурсивной функции - это часть кода функции, в которой описывается

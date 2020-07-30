@@ -71,12 +71,14 @@ def binary_search(search_list, number):
 # Create the list of numbers "my_list".
 my_list = [1, 3, 5, 7, 9]
 
+
 # Пытаемся найти индекс элемента, который находится в списке "my_list".
 # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
 # Try to find the index of the element that is in the list "my_list".
 # The function "print()" prints the specified message to the screen, or other standard output device.
 print(binary_search(my_list, 7))
+
 
 # Пытаемся найти индекс элемента, который не находится в списке "my_list".
 # ----------
