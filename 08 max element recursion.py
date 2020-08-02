@@ -1,13 +1,13 @@
 # Поиск наибольшего элемента используя рекурсию.
 # ----------
-# Finding the largest element using recursion.
+# Finding the greatest element using recursion.
 
 
 # Создаем функцию "find_max_one", которая принимает один входной параметр:
 # список "list_one", содержащий элементы для поиска наибольшего из них.
 # ----------
 # Create the function "find_max_one" that accepts one parameter:
-# the list "list_one" containing the elements to find the largest one.
+# the list "list_one" containing the elements to find the greatest one.
 def find_max_one(list_one):
     # Если список "list_two" содержит 0 элементов, то функция "find_max_one" возвращает "None".
     # "None" означает nil (ничто) в Python. Используем, чтобы определять, что значения нет в списке.
@@ -35,10 +35,10 @@ def find_max_one(list_one):
     # If one of the recursively called copies of the function "find_max_one" takes the list containing 1 element
     # as a parameter, then we exit this recursively called copy of the function "find_max_one"
     # and it returns the first element of this list to the previous copy of the function "find_max_one"
-    # in the call stack, since if a list contains only 1 element, then this element is the largest one.
+    # in the call stack, since if a list contains only 1 element, then this element is the greatest one.
     # If the function "find_max_one" is initially called with the list containing 1 element as a parameter,
     # then the function "find_max_one" immediately returns the first element of this list,
-    # since if a list contains only 1 element, then this element is the largest one.
+    # since if a list contains only 1 element, then this element is the greatest one.
     if len(list_one) == 1:
         return list_one[0]
     # Создаем рекурсивный случай.
@@ -81,7 +81,7 @@ def find_max_one(list_one):
 # Список "my_list1" содержит несколько чисел, а список "my_list2" является пустым.
 # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
-# Create the 2 lists and try to find the largest elements in these lists.
+# Create the 2 lists and try to find the greatest elements in these lists.
 # The list "my_list1" contains several numbers, but the list "my_list2" is empty.
 # The function "print()" prints the specified message to the screen, or other standard output device.
 my_list1 = [2, 0, 6, 9, 7, 7]
@@ -95,10 +95,10 @@ print(find_max_one(my_list2))
 # Создаем функцию "find_max_two", которая принимает один входной параметр:
 # список "list_two", содержащий элементы для поиска наибольшего из них.
 # ----------
-# Let's create another variation of the function to find the largest element.
+# Let's create another variation of the function to find the greatest element.
 # Here we are creating another recursive case.
 # Create the function "find_max_two" that accepts one parameter:
-# the list "list_two" containing the elements to find the largest one.
+# the list "list_two" containing the elements to find the greatest one.
 def find_max_two(list_two):
     # Если список содержит 0 элементов, то функция "find_max_two" возвращает "None".
     # "None" означает nil (ничто) в Python. Используем, чтобы определять, что значения нет в списке.
@@ -122,10 +122,10 @@ def find_max_two(list_two):
     # If one of the recursively called copies of the function "find_max_two" takes the list containing 1 element
     # as a parameter, then we exit this recursively called copy of the function "find_max_two"
     # and it returns the first element of this list to the previous copy of the function "find_max_two"
-    # in the call stack, since if a list contains only 1 element, then this element is the largest one.
+    # in the call stack, since if a list contains only 1 element, then this element is the greatest one.
     # If the function "find_max_two" is initially called with the list containing 1 element as a parameter,
     # then the function "find_max_two" immediately returns the first element of this list,
-    # since if a list contains only 1 element, then this element is the largest one.
+    # since if a list contains only 1 element, then this element is the greatest one.
     if len(list_two) == 1:
         return list_two[0]
     # Создаем рекурсивный случай.
@@ -161,6 +161,6 @@ def find_max_two(list_two):
 
 # Попытаемся найти наибольшие элементы в списках "my_list1" и "my_list2", используя функцию "find_max_two".
 # ----------
-# Try to find the largest elements in the lists "my_list1" and "my_list2" using the function "find_max_two".
+# Try to find the greatest elements in the lists "my_list1" and "my_list2" using the function "find_max_two".
 print(find_max_two(my_list1))
 print(find_max_two(my_list2))
