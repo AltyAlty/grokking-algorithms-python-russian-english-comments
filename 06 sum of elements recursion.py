@@ -55,7 +55,7 @@ def sum_of_elem(list_of_elem):
     # as a parameter, then the base case is triggered.
     # The copies of the function "sum_of_elem" in the call stack terminate one by one and return their calculated values
     # to the previous recursively called copies of the function "sum_of_elem"
-    # until the very first called function "sum_of_elem" exits.
+    # until the very first called function "sum_of_elem" stops its work.
     else:
         return list_of_elem[0] + sum_of_elem(list_of_elem[1:])
 

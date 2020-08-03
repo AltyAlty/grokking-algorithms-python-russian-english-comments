@@ -47,7 +47,7 @@ def fact(x):
     # When a copy of the function "fact" is recursively called with the parameter of 1, then the base case is triggered.
     # The copies of the function "fact" in the call stack terminate one by one and return their calculated values
     # to the previous recursively called copies of the function "fact"
-    # until the very first called function "fact" exits.
+    # until the very first called function "fact" stops its work.
     else:
         return x * fact(x-1)
 

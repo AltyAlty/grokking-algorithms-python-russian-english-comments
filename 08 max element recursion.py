@@ -63,7 +63,7 @@ def find_max_one(list_one):
     # as a parameter, then the base case is triggered.
     # The copies of the function "find_max_one" in the call stack terminate one by one and return
     # their calculated values to the previous recursively called copies of the function "find_max_one"
-    # until the very first called function "find_max_one" exits.
+    # until the very first called function "find_max_one" stops its work.
     if list_one[0] > list_one[1]:
         del list_one[1]
         return find_max_one(list_one)

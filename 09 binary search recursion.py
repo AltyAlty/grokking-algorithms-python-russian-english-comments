@@ -55,8 +55,8 @@ def binary_search(search_list, low, high, element):
     # Переменная "mid" содержит этот индекс среднего элемента.
     # Индекс среднего элемента списка "search_list" округляется в меньшую сторону.
     # ----------
-    # if the specified lower bound is less or equal to the specified upper bound
-    # and this lower bound is greater or equal to 0,
+    # if the specified lower bound is less than or equal to the specified upper bound
+    # and this lower bound is greater than or equal to 0,
     # then we find the index of the middle element of the list "search_list".
     # The variable "mid" stores this index of the middle element.
     # The value of the variable "mid" is rounded down.

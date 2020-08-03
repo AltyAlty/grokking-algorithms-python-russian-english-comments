@@ -56,7 +56,8 @@ def greet(username):
     # Функция "greet" возобновляет свою работу и выводит на экран
     # текст "Ok, bye in 3 .. 2 .. 1" при помощи функции "print()".
     # ----------
-    # The function "how_are_you" exits, transfers control to the function "greet" and is removed from the call stack.
+    # The function "how_are_you" stops its work, transfers control to the function "greet"
+    # and is removed from the call stack.
     # The function "greet" resumes and prints
     # the message "Ok, bye in 3 .. 2 .. 1" to the screen using the function "print()".
     print("Ok, bye in 3 .. 2 .. 1")
@@ -74,9 +75,9 @@ def greet(username):
     # Функция "greet" возобновляет свою работу.
     # Функция "greet" завершает свою работу убирается из стека вызовов.
     # ----------
-    # The function "bye" exits, transfers control to the function "greet" and is removed from the call stack.
+    # The function "bye" stops its work, transfers control to the function "greet" and is removed from the call stack.
     # The function "greet" resumes.
-    # The function "greet" exits and is removed from the call stack.
+    # The function "greet" stops its work and is removed from the call stack.
 
 
 # Пытаемся поприветствовать пользователя John Shepard.

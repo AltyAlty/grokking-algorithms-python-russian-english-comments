@@ -56,7 +56,7 @@ def count(list_of_elem):
     # as a parameter, then the base case is triggered.
     # The copies of the function "count" in the call stack terminate one by one and return their calculated values
     # to the previous recursively called copies of the function "count"
-    # until the very first called function "count" exits.
+    # until the very first called function "count" stops its work.
     else:
         return 1 + count(list_of_elem[1:])
 

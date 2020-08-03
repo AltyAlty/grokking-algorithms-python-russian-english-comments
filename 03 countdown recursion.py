@@ -35,7 +35,7 @@ def countdown(i):
     # Print the number to the screen using the function "print()" and recursively call the function "countdown"
     # with the parameter decreased by 1. This is our recursive case.
     # When the parameter of the function "countdown" is less than 0,
-    # then the base case is triggered and the function exits.
+    # then the base case is triggered and the function stops its work.
     else:
         print(i)
         return countdown(i-1)
