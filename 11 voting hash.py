@@ -1,19 +1,19 @@
 # Голосование, используя хеш-таблицы (словари).
 # Используя словарь, здесь мы отслеживаем проголосовавших избирателей и не позволяем им голосовать,
-# а также заносим в словарь тех избирателей, кто еще не проголосовал и позволяем им голосовать.
+# а также вносим в словарь тех избирателей, кто еще не проголосовал, и позволяем им голосовать.
 # ----------
 # Voting using hash table (dictionaries).
 # Using the dictionary, here we track the voters who voted and do not allow them to vote,
 # and we also enter into the dictionary those voters who have not yet voted and allow them to vote.
 
 
-# Создаем словарь (это хеш-таблица в Python) "voted", который хранит список проголосовавших избирателей.
+# Создаем словарь (словарь это хеш-таблица в Python) "voted", который хранит список проголосовавших избирателей.
 # Хеш-таблица это тип структуры данных, который представляет из себя массив,
 # элементы которога содержат пары "ключ : значение".
 # При помощи хеш-функции можно получить доступ к значению, обратившись к его ключу.
 # ----------
-# Create the dictionary (this is a hash table in Python) "voted", that stores the list of voters who voted.
-# A hash table is a type of data structure, that is an array whose elements contain pairs "key : value".
+# Create the dictionary (a dictionary is a hash table in Python) "voted", that stores the list of voters who voted.
+# A hash table is a type of data structure that is an array whose elements contain pairs "key : value".
 # Using a hash function, you can access a value by referring to its key.
 voted = {}
 
@@ -22,7 +22,7 @@ voted = {}
 # переменная "voter_name", которая содержит ключ, обозначающий имя избирателя.
 # ----------
 # Create the function "check_voter" that accepts one parameter:
-# the variable "voter_name" that contains a key representing the voter's name.
+# the variable "voter_name" that contains a key representing the name of a voter.
 def check_voter(voter_name):
     # При помощи функции "get" пытаемся получить значение, обращаясь к указанному ключу "voter_name".
     # Если указанный ключ "voter_name" есть в словаре "voted", то это означает,
@@ -37,13 +37,13 @@ def check_voter(voter_name):
         print("Get out!")
     # Если указанный ключ "voter_name" отсутствует в словаре "voted", то функция "get" возвращает "None".
     # Это означает, что избиратель голосует первый раз, поэтому
-    # нам необходимо позволить ему проголосовать и занести имя этого избирателя в словарь "voted",
-    # внеся значение "True" путем обращения к ключу "voter_name".
+    # нам необходимо позволить ему проголосовать и внести имя этого избирателя в словарь "voted"
+    # при помощи добавления значения "True" путем обращения к ключу "voter_name".
     # ----------
     # If the specified key "voter_name" is not in the dictionary "voted", then the function "get" returns "None".
-    # This means that the voter votes for the first time, so we need to allow him to vote
-    # and add the name of this voter to the dictionary "voted",
-    # adding the value "True" by referring to the key "voter_name".
+    # This means that the voter votes the first time, so we need to allow him to vote
+    # and enter the name of this voter into the dictionary "voted"
+    # by adding the value "True" by referring to the key "voter_name".
     else:
         voted[voter_name] = True
         print("You can vote!")
