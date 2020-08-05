@@ -19,7 +19,7 @@ def quick_sort(list_to_sort):
     # Если изначально вызывается функция "quick_sort", которая принимает в качестве параметра список,
     # содержащий 1 или 0 элементов, то функция "quick_sort" сразу возвращает этот список,
     # поскольку если список содержит 1 или 0 элементов, то он уже отсортирован по возрастанию.
-    # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
+    # Ключевое слово "return" выходит из функции и возвращает какое-либо значение.
     # ----------
     # Create the base case.
     # The base case in a recursive function is a part of the function code that describes
@@ -31,7 +31,7 @@ def quick_sort(list_to_sort):
     # If the function "quick_sort" is initially called with the list containing 1 or 0 elements as a parameter,
     # then the function "quick_sort" immediately returns this list,
     # since if a list contains 1 or 0 element, then this list is already sorted in ascending order.
-    # The function "print()" prints the specified message to the screen, or other standard output device.
+    # The keyword "return" is to exit a function and return a value.
     if len(list_to_sort) < 2:
         return list_to_sort
     # Создаем рекурсивный случай.

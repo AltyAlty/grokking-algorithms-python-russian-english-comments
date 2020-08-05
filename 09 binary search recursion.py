@@ -36,6 +36,7 @@ def binary_search(search_list, low, high, element):
     # или который имеет индекс меньший минимального индекса в списке "search_list".
     # Если мы успешно перехватываем ошибку "IndexError", то выводится сообщение об ошибке и
     # программа продолжает свою работу.
+    # Ключевое слово "return" выходит из функции и возвращает какое-либо значение.
     # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
     # ----------
     # In the except block we try to catch th error "IndexError",
@@ -44,6 +45,7 @@ def binary_search(search_list, low, high, element):
     # or that has the index less than the minimum index of the list "search_list".
     # If we successfully catch the error "IndexError", then the error message is displayed
     # and the program continues its work.
+    # The keyword "return" is to exit a function and return a value.
     # The function "print()" prints the specified message to the screen, or other standard output device.
     except IndexError:
         return print("Указанная верхняя граница превышает действительную верхнюю границу списка "

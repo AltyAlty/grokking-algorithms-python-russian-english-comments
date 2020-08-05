@@ -1,8 +1,8 @@
-# Голосование, используя хеш-таблицы (словари).
+# Голосование, используя хеш-таблицу (словарь).
 # Используя словарь, здесь мы отслеживаем проголосовавших избирателей и не позволяем им голосовать,
 # а также вносим в словарь тех избирателей, кто еще не проголосовал, и позволяем им голосовать.
 # ----------
-# Voting using hash table (dictionaries).
+# Voting using hash table (dictionary).
 # Using the dictionary, here we track the voters who voted and do not allow them to vote,
 # and we also enter into the dictionary those voters who have not yet voted and allow them to vote.
 
