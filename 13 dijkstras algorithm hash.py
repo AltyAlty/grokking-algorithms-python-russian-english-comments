@@ -1,18 +1,18 @@
-# Алгоритм Дейкстры, используя хеш-таблицу (словарь).
+# Алгоритм Дейкстры, используя хеш-таблицы (словари).
 # Здесь нам нужно найти все кратчайшие пути от начального узла до всех остальных узлов
 # в направленном ациклическом взвешенном графе.
 # ----------
-# Dijkstra's algorithm using hash table (dictionary).
-# Here we need to find all shortest paths from a start node to all other nodes
+# Dijkstra's algorithm using hash tables (dictionaries).
+# Here we need to find all the shortest paths from a start node to all other nodes
 # in a directed acyclic weighted graph.
 
 
 # Создаем словарь "graph", который представляет из себя направленный ациклический взвешенный граф.
-# Особенность этого словаря в том, что каждое его значение является словарем.
+# Этот словарь особенный тем, что каждое его значение является словарем.
 # Эти значения представляют из себя наборы соседних узлов каждого узла этого графа и их стоимостей.
 # ----------
 # Create the dictionary "graph" which is a directed acyclic weighted graph.
-# The peculiarity of this dictionary is that each of its value is a dictionary.
+# This dictionary is special in that each of its value is a dictionary.
 # These values are the sets of neighboring nodes of each node of this graph and their costs.
 graph = {"start": {"a": 6,
                    "b": 2},
@@ -22,10 +22,11 @@ graph = {"start": {"a": 6,
          "fin": {}}
 
 
-# Создаем переменную "infinity", которая хранит "бесконечность". Мы используем эту переменную,
-# когда неизвестен путь до какого-либо узла.
+# Создаем переменную "infinity", которая хранит "бесконечность".
+# Мы используем эту переменную, когда неизвестен путь до какого-либо узла.
 # ----------
-# Create the variable "infinity" that stores "infinity". We use this variable when a path to a node is unknown.
+# Create the variable "infinity" that stores "infinity".
+# We use this variable when a path to a node is unknown.
 infinity = float("inf")
 
 
@@ -35,7 +36,7 @@ infinity = float("inf")
 # В комментариях ниже указаны изменения значений после работы каждого цикла while,
 # который находится внизу этой программы.
 # ----------
-# Create the dictionary "costs" which is a table of the costs of paths from the node "start"
+# Create the dictionary "costs" which is a table of costs of the paths from the node "start"
 # to the other nodes of the graph "graph".
 # We specify those costs that are known at the beginning of the algorithm.
 # The comments below show the changes of the values after each cycle of the while loop,
@@ -61,8 +62,11 @@ parents = {"a": "start",    # "b"     - "b"     - "b"
 
 # Создаем список "processed", в который мы добавляем уже обработанные узлы,
 # чтобы избежать повторной обработки таких узлов.
+# Изначально этот список пустой.
 # ----------
-# Create the list "processed" to which we add already processed nodes to avoid reprocessing such nodes.
+# Create the list "processed" to which we add already processed nodes
+# to avoid reprocessing such nodes.
+# Initially this list is empty.
 processed = []
 
 
@@ -85,7 +89,7 @@ def find_lowest_cost_node(table_of_costs):
     # Создаем переменную "lowest_cost_node", которая хранит имя узла, который имеет наименьшую стоимость.
     # Изначально эта переменная хранит значение "None".
     # ----------
-    # Create the variable "lowest_cost_node" that stores a name of the lowest cost node.
+    # Create the variable "lowest_cost_node" that stores the name of the lowest cost node.
     # Initially this variable stores "None".
     lowest_cost_node = None
     # Создаем цикл for, в котором перебираем все ключи (узлы графа) словаря "table_of_costs".
@@ -130,12 +134,13 @@ def find_lowest_cost_node(table_of_costs):
 node = find_lowest_cost_node(costs)  # "a" - "fin" - None
 
 
-# Высчитываем все кратчайшие пути от узла "start" до узлов "a", "b" и "fin" путем обновления словаря "costs".
+# Высчитываем все кратчайшие пути от узла "start" до узлов "a", "b" и "fin"
+# путем обновления словарей "costs" и "parents".
 # Создаем цикл while, который работает пока переменная "node" не является пустой,
 # то есть пока у нас есть узлы с наименьшей стоимостью для обработки.
 # ----------
 # Calculate all the shortest paths from the node "start" to the nodes "a", "b", "fin"
-# by updating the dictionary "costs".
+# by updating the dictionaries "costs" and "parents".
 # Create the while loop that works as long as the variable "node" is not empty, that is,
 # as long as we have the lowest cost nodes to process.
 while node is not None:
@@ -187,7 +192,8 @@ while node is not None:
     # находим следующий узел, который имеет наименьшую стоимость,
     # и работа этого цикла while продолжается с начала, используя этот новый узел.
     # ----------
-    # find the next lowest cost node and this while loop continues from the beginning using this new node.
+    # find the next lowest cost node
+    # and this while loop continues from the beginning using this new node.
     node = find_lowest_cost_node(costs)
 
 

@@ -1,16 +1,18 @@
-# Быстрая сортировка используя рекурсию.
+# Быстрая сортировка, используя рекурсию.
 # ----------
 # Quick sort using recursion.
 
 
 # Создаем функцию "quick_sort", которая принимает один входной параметр:
-# список "list_to_sort", который содержит числа. Эта функция возвращает отсортированный список по возрастанию.
+# список "list_to_sort", который содержит числа.
+# Эта функция возвращает этот список отсортированный по возрастанию.
 # ----------
-# Create the function "quick_sort" that accepts one parameter: the list "list_to_sort" that contains the numbers.
-# This function returns the sorted list in ascending order.
+# Create the function "quick_sort" that accepts one parameter:
+# the list "list_to_sort" that contains numbers.
+# This function returns this list sorted in ascending order.
 def quick_sort(list_to_sort):
     # Создаем базовый случай.
-    # Базовый случай в рекурсивной функции - это часть кода функции, в которой описывается
+    # Базовый случай в рекурсивной функции - это часть функции, в которой описывается
     # условие прекращения работы функции в целях предотвращения зацикливания.
     # Если одна из вызванных рекурсивно копий функции "quick_sort" принимает в качестве параметра список,
     # содержащий 1 или 0 элементов, то мы выходим из этой копии функции "quick_sort" и возвращаем этот список
@@ -19,36 +21,38 @@ def quick_sort(list_to_sort):
     # Если изначально вызывается функция "quick_sort", которая принимает в качестве параметра список,
     # содержащий 1 или 0 элементов, то функция "quick_sort" сразу возвращает этот список,
     # поскольку если список содержит 1 или 0 элементов, то он уже отсортирован по возрастанию.
+    # Функция "len()" возвращает количество элементов в списке.
     # Ключевое слово "return" выходит из функции и возвращает какое-либо значение.
     # ----------
     # Create the base case.
-    # The base case in a recursive function is a part of the function code that describes
-    # the condition for the termination of the function in order to prevent loops.
-    # If one of the recursively called copies of the function "quick_sort" takes the list containing 1 or 0 elements
+    # Base case in a recursive function is a part of a function that describes
+    # a condition for termination of the function in order to prevent loops.
+    # If one of the recursively called copies of the function "quick_sort" takes a list containing 1 or 0 elements
     # as a parameter, then we exit this recursively called copy of the function "quick_sort"
     # and it returns this list to the previous copy of the function "quick_sort"
-    # in the call stack, since if a list contains 1 or 0 element, then this list is already sorted in ascending order.
-    # If the function "quick_sort" is initially called with the list containing 1 or 0 elements as a parameter,
+    # in a call stack, since if a list contains 1 or 0 elements, then this list is already sorted in ascending order.
+    # If the function "quick_sort" is initially called with a list containing 1 or 0 elements as a parameter,
     # then the function "quick_sort" immediately returns this list,
-    # since if a list contains 1 or 0 element, then this list is already sorted in ascending order.
+    # since if a list contains 1 or 0 elements, then this list is already sorted in ascending order.
+    # The function "len()" returns the number of elements in a list.
     # The keyword "return" is to exit a function and return a value.
     if len(list_to_sort) < 2:
         return list_to_sort
     # Создаем рекурсивный случай.
-    # Рекурсивный случай в рекурсивной функции - это часть кода функции, в которой функция вызывает сама себя
+    # Рекурсивный случай в рекурсивной функции - это часть функции, в которой функция вызывает сама себя
     # в целях выполнения какой-либо задачи.
     # Если список "list_to_sort" содержит 2 или больше элементов, то:
     # ----------
     # Create the recursive case.
-    # The recursive case in a recursive function is a part of the function code
-    # in which the function calls itself in order to perform a task.
+    # Recursive case in a recursive function is a part of a function
+    # in which the function calls itself in order to perform some task.
     # If the list "list_to_sort" contains 2 or more elements, then:
     else:
         # 1. Создается переменная "pivot", которая хранит опорный элемент списка "list_to_sort",
         # который равен элементу списка "list_to_sort" под индексом 0.
         # ----------
         # 1. The variable "pivot", that stores the pivot element of the list "list_to_sort",
-        # which is equal to the element of the list "list_to_sort" at index 0, is created.
+        # that is equal to the element of the list "list_to_sort" at index 0, is created.
         pivot = list_to_sort[0]
         # 2. Формируется подсписок элементов списка "list_to_sort",
         # которые меньше или равны опорному элементу списка "list_to_sort".
@@ -57,10 +61,10 @@ def quick_sort(list_to_sort):
         # и сохраняем в подсписке "less" только те элементы, которые меньше или равны опорному элементу.
         # ----------
         # 2. The sublist of the elements of the list "list_to_sort",
-        # which are less than or equal to the pivot element of the list "list_to_sort", is formed.
+        # that are less than or equal to the pivot element of the list "list_to_sort", is formed.
         # To do this, we iterate over all the elements of the list "list_to_sort",
         # except for the first element of this list, using a for loop, and store in the sublist "less"
-        # only those elements which are less than or equal to the pivot element.
+        # only those elements that are less than or equal to the pivot element.
         less = [i for i in list_to_sort[1:] if i <= pivot]
         # 3. Формируется подсписок элементов списка "list_to_sort",
         # которые больше опорного элемента списка "list_to_sort".
@@ -69,10 +73,10 @@ def quick_sort(list_to_sort):
         # и сохраняем в подсписке "greater" только те элементы, которые больше опорного элемента.
         # ----------
         # 3. The sublist of the elements of the list "list_to_sort",
-        # which are greater than the pivot element of the list "list_to_sort", is formed.
+        # that are greater than the pivot element of the list "list_to_sort", is formed.
         # To do this, we iterate over all the elements of the list "list_to_sort",
         # except for the first element of this list, using a for loop,
-        # and store in the sublist "greater" only those elements which are greater than the pivot element.
+        # and store in the sublist "greater" only those elements are are greater than the pivot element.
         greater = [i for i in list_to_sort[1:] if i > pivot]
         # 4. Рекурсивно вызываются копии функции "quick_sort" для подсписков "less" и "greater",
         # при этом результаты работ этих рекурсивно вызванных копий функции "quick_sort" конкатенируются
@@ -86,7 +90,7 @@ def quick_sort(list_to_sort):
         # 4. Copies of the function "quick_sort" are recursively called for the sublists "less" and "greater",
         # and the results of these recursively called copies of the function "quick_sort"
         # are concatenated to the pivot element (["less" + "pivot" + "greater"]).
-        # When a copy of the function "quick_sort" is recursively called with the list containing 1 or 0 elements
+        # When a copy of the function "quick_sort" is recursively called with a list containing 1 or 0 elements
         # as a parameter, then the base case is triggered.
         # The copies of the function "quick_sort" in the call stack terminate one by one and return
         # their calculated values to the previous recursively called copies of the function "quick_sort"

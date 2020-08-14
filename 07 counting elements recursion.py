@@ -1,4 +1,4 @@
-# Подсчет элементов используя рекурсию.
+# Подсчет элементов, используя рекурсию.
 # ----------
 # Counting elements using recursion.
 
@@ -7,10 +7,10 @@
 # список "list_of_elem", содержащий элементы для подсчета.
 # ----------
 # Create the function "count" that accepts one parameter:
-# the list "list_of_elem" containing the elements to count.
+# the list "list_of_elem" containing elements to count.
 def count(list_of_elem):
     # Создаем базовый случай.
-    # Базовый случай в рекурсивной функции - это часть кода функции, в которой описывается
+    # Базовый случай в рекурсивной функции - это часть функции, в которой описывается
     # условие прекращения работы функции в целях предотвращения зацикливания.
     # Если одна из вызванных рекурсивно копий функции "count" принимает в качестве параметра список,
     # содержащий 0 элементов, то мы выходим из этой копии функции "count" и возвращаем число "0"
@@ -19,23 +19,25 @@ def count(list_of_elem):
     # Если изначально вызывается функция "count", которая принимает в качестве параметра список,
     # содержащий 0 элементов, то функция "count" сразу возвращает число "0", поскольку количество элементов
     # в списке с 0 элементов всегда равно 0.
+    # Функция "len()" возвращает количество элементов в списке.
     # Ключевое слово "return" выходит из функции и возвращает какое-либо значение.
     # ----------
     # Create the base case.
-    # The base case in a recursive function is a part of the function code that describes
-    # the condition for the termination of the function in order to prevent loops.
-    # If one of the recursively called copies of the function "count" takes the list containing 0 elements
+    # Base case in a recursive function is a part of a function that describes
+    # a condition for termination of the function in order to prevent loops.
+    # If one of the recursively called copies of the function "count" takes a list containing 0 elements
     # as a parameter, then we exit this recursively called copy of the function "count"
-    # and it returns the number "0" to the previous copy of the function "count" in the call stack,
-    # since the number of elements in the list with 0 elements is always 0.
-    # If the function "count" is initially called with the list containing 0 elements as a parameter,
+    # and it returns the number "0" to the previous copy of the function "count" in a call stack,
+    # since the number of elements in a list with 0 elements is always 0.
+    # If the function "count" is initially called with a list containing 0 elements as a parameter,
     # then the function "count" immediately returns the number "0", since the number of elements
-    # in the list with 0 elements is always 0.
+    # in a list with 0 elements is always 0.
+    # The function "len()" returns the number of elements in a list.
     # The keyword "return" is to exit a function and return a value.
     if len(list_of_elem) == 0:
         return 0
     # Создаем рекурсивный случай.
-    # Рекурсивный случай в рекурсивной функции - это часть кода функции, в которой функция вызывает сама себя
+    # Рекурсивный случай в рекурсивной функции - это часть функции, в которой функция вызывает сама себя
     # в целях выполнения какой-либо задачи.
     # Рекурсивно вызываем копию функции "count" со списком "list_of_elem" в качестве входного параметра,
     # за исключением первого элемента в этом списке, при этом результат работы этой рекурсивно вызванной копии
@@ -47,8 +49,8 @@ def count(list_of_elem):
     # пока не завершит работу самая первая вызванная функция "count".
     # ----------
     # Create the recursive case.
-    # The recursive case in a recursive function is a part of the function code
-    # in which the function calls itself in order to perform a task.
+    # Recursive case in a recursive function is a part of a function
+    # in which the function calls itself in order to perform some task.
     # Recursively call a copy of the function "count" with the list "list_of_elem" as a parameter,
     # except for the first element of this list, while the result of
     # this recursively called copy of the function "count" is is increased by 1.

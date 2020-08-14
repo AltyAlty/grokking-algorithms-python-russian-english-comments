@@ -4,7 +4,7 @@
 # ----------
 # Printing greetings.
 # Here we create two functions, that are called by the third function.
-# Here we can see how the call stack works.
+# Here we can see how a call stack works.
 
 
 # Создаем функцию "how_are_you", которая выводит на экран текст "How are you, username ?" при помощи функции "print()".
@@ -58,16 +58,16 @@ def greet(username):
     # ----------
     # The function "how_are_you" stops its work, transfers control to the function "greet"
     # and is removed from the call stack.
-    # The function "greet" resumes and prints
+    # The function "greet" resumes its work and prints
     # the message "Ok, bye in 3 .. 2 .. 1" to the screen using the function "print()".
     print("Ok, bye in 3 .. 2 .. 1")
     # Функция "greet" вызывает функцию "bye".
-    # В стеке вызовов работа функции "greet" приостанавливается.
+    # В стеке вызовов работа функции "greet" снова приостанавливается.
     # В стек вызовов наверх добавляется функция "bye".
     # Функция "bye" выполняет свою работу: выводит на экран сообщение "Ok, bye!"
     # ----------
     # The function "greet" calls the function "bye".
-    # The function "greet" is suspended in the call stack.
+    # The function "greet" is suspended again in the call stack.
     # The function "bye" is added to the call stack.
     # The function "bye" does its work: it prints the message "Ok, bye!" to the screen.
     bye()
@@ -76,7 +76,7 @@ def greet(username):
     # Функция "greet" завершает свою работу убирается из стека вызовов.
     # ----------
     # The function "bye" stops its work, transfers control to the function "greet" and is removed from the call stack.
-    # The function "greet" resumes.
+    # The function "greet" resumes its work.
     # The function "greet" stops its work and is removed from the call stack.
 
 

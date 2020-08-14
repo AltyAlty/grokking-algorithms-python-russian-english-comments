@@ -5,7 +5,7 @@
 # Here we need to find a set of radio stations to cover a certain number of states using a greedy algorithm.
 
 
-# Множество - это тип структуры данных, похожий на список, но который не может иметь дубликаты.
+# Множество - это тип структуры данных, похожий на список, который не может иметь дубликаты.
 # Создаем множество "states_needed", которое хранит перечень штатов для покрытия.
 # ----------
 # Set is a list-like type of data structure that cannot have duplicates.
@@ -28,18 +28,18 @@ stations = {"kone": {"id", "nv", "ut"},
 
 
 # Создаем множество "final_stations", которое хранит итоговый набор радиостанций для покрытия штатов.
-# Изначально этот словарь пуст.
+# Изначально этот словарь пустой.
 # ----------
 # Create the set "final_stations" that stores a final set of radio stations to cover the states.
 # Initially this set is empty.
 final_stations = set()
 
 
-# Создаем цикл while, который генерирует итоговый набор радиостанций для покрытия штатов.
+# Создаем цикл while, который генерирует итоговый набор радиостанций для покрытия штатов "final_stations".
 # Этот цикл while работает, пока множество "states_needed" не является пустым,
 # то есть пока у нас имеются непокрытые штаты.
 # ----------
-# Create the while loop that generates the final set of radio stations to cover the states.
+# Create the while loop that generates the final set of radio stations to cover the states "final_stations".
 # This while loop works as long as the set "states_needed" is not empty, that is,
 # as long as we have uncovered states.
 while states_needed:
@@ -59,10 +59,10 @@ while states_needed:
     # and can be covered by the radio station "best_station".
     # Initially this variable stores an empty set.
     states_covered = set()
-    # Создаем цикл for, в котором мы перебираем все ключи ("station") и значения (states_for_station)
+    # Создаем цикл for, в котором мы перебираем все ключи ("station") и значения ("states_for_station")
     # в словаре "stations" и находим радиостанцию "best_station".
     # ----------
-    # We create the for loop in which we iterate over all the keys ("station") and values (states_for_station)
+    # Create the for loop in which we iterate over all the keys ("station") and values ("states_for_station")
     # in the dictionary "stations" and find the radio station "best_station".
     for station, states_for_station in stations.items():
         # Создаем переменную "covered", которая хранит множество штатов,
@@ -71,11 +71,11 @@ while states_needed:
         # 1. "states_needed" - множество еще не покрытых штатов.
         # 2. "states_for_station" - множество штатов, которые может покрыть текущяя радиостанция "station".
         # ----------
-        # Create the variable "covered" that stores a set of states that are not yet covered
-        # and can be covered by the current radio station "station".
+        # Create the variable "covered" that stores a set of states
+        # that are not yet covered and can be covered by the current radio station "station".
         # We find this set by intersecting the following sets:
-        # 1. "states_needed" - the set of states that are not yet covered.
-        # 2. "states_for_station" - the set of states that can be covered by the current radio station "station".
+        # 1. "states_needed" - the set of the states that are not yet covered.
+        # 2. "states_for_station" - the set of the states that can be covered by the current radio station "station".
         covered = states_needed & states_for_station
         # Если множество "covered" больше, чем множество "states_covered", то
         # ----------
@@ -93,8 +93,8 @@ while states_needed:
     # вычитая список штатов, которые покрываются текущей лучшей радиостанцией "best_station".
     # Мы это делаем путем вычитания из множества "states_needed" множества "states_covered".
     # ----------
-    # After each cycle of the for loop, we reduce the list of states to be covered
-    # by subtracting the list of states that are covered by the current best radio station "best_station".
+    # After each cycle of the for loop, we reduce the list of the states to be covered
+    # by subtracting the list of the states that are covered by the current best radio station "best_station".
     # We do this by subtracting the set "states_covered" from the set "states_needed".
     states_needed -= states_covered
     # А также после работы каждого цикла for мы добавляем текущуюю лучшую радиостанцию "best_station"
@@ -106,9 +106,9 @@ while states_needed:
     final_stations.add(best_station)
 
 
-# Выводим на экран итоговый набор радиостанций для покрытия штатов.
+# Выводим на экран итоговый набор радиостанций для покрытия штатов "final_stations".
 # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
 # ----------
-# Display the final set of radio stations to cover the states.
+# Display the final set of the radio stations to cover the states "final_stations".
 # The function "print()" prints the specified message to the screen, or other standard output device.
 print(final_stations)

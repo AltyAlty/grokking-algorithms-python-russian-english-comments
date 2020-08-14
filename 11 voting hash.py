@@ -1,20 +1,22 @@
-# Голосование, используя хеш-таблицу (словарь).
+# Голосование, используя хеш-таблицы (словари).
 # Используя словарь, здесь мы отслеживаем проголосовавших избирателей и не позволяем им голосовать,
 # а также вносим в словарь тех избирателей, кто еще не проголосовал, и позволяем им голосовать.
 # ----------
-# Voting using hash table (dictionary).
-# Using the dictionary, here we track the voters who voted and do not allow them to vote,
+# Voting using hash tables (dictionaries).
+# Using a dictionary, here we track the voters who voted and do not allow them to vote,
 # and we also enter into the dictionary those voters who have not yet voted and allow them to vote.
 
 
-# Создаем словарь (словарь это хеш-таблица в Python) "voted", который хранит список проголосовавших избирателей.
 # Хеш-таблица это тип структуры данных, который представляет из себя массив,
-# элементы которога содержат пары "ключ : значение".
+# элементы которого содержат пары "ключ : значение".
 # При помощи хеш-функции можно получить доступ к значению, обратившись к его ключу.
+# Создаем словарь (словарь это хеш-таблица в Python) "voted", который хранит список проголосовавших избирателей.
+# Изначально этот словарь пустой.
 # ----------
-# Create the dictionary (a dictionary is a hash table in Python) "voted", that stores the list of voters who voted.
-# A hash table is a type of data structure that is an array whose elements contain pairs "key : value".
+# Hash table is a type of data structure that is an array whose elements contain pairs "key : value".
 # Using a hash function, you can access a value by referring to its key.
+# Create the dictionary (a dictionary is a hash table in Python) "voted", that stores a list of voters who voted.
+# Initially this dictionary is empty.
 voted = {}
 
 
@@ -41,7 +43,7 @@ def check_voter(voter_name):
     # при помощи добавления значения "True" путем обращения к ключу "voter_name".
     # ----------
     # If the specified key "voter_name" is not in the dictionary "voted", then the function "get" returns "None".
-    # This means that the voter votes the first time, so we need to allow him to vote
+    # This means that the voter votes the first time, so we need to allow the voter to vote
     # and enter the name of this voter into the dictionary "voted"
     # by adding the value "True" by referring to the key "voter_name".
     else:

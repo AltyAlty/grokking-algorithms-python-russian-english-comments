@@ -1,6 +1,6 @@
-# Бинарный поиск используя рекурсию.
+# Бинарный поиск, используя рекурсию.
 # ----------
-# Binary Search using recursion.
+# Binary search using recursion.
 
 
 # Создаем функцию "binary_search", которая принимает 4 входных параметра:
@@ -14,24 +14,26 @@
 # This function returns the index of the element which is the number to find "number".
 def binary_search(search_list, low, high, element):
     # Создаем локальную переменную "upper_bound_error_list", которую мы используем для проверки указанных
-    # границ области поиска: не превышает ли указанная верхняя граница
-    # действительную верхнюю границу списка "search_list",
-    # или не является ли указанная нижняя граница меньше действительной нижней границы списка "search_list".
+    # границ области поиска:
+    # 1. не превышает ли указанная верхняя граница действительную верхнюю границу списка "search_list";
+    # 2. не является ли указанная нижняя граница меньше действительной нижней границы списка "search_list".
     # ----------
     # Create the variable "upper_bound_error_list" that we use to check the specified bounds of the search area:
-    # whether the specified upper bound is not greater than the actual upper bound of the list "search_list",
-    # or the specified lower bound is less than the actual lower bound of the list "search_list".
+    # 1. whether the specified upper bound is greater than the actual upper bound of the list "search_list" or not;
+    # 2. whether the specified lower bound is less than the actual lower bound of the list "search_list" or not.
     upper_bound_error_list = []
     # В блоке try, используя цикл for, пытаемся перебрать все элементы списка "search_list"
     # и поместить их в список "upper_bound_error_list", при помощи метода "append".
+    # Функция "range()" возвращает последовательность чисел, за исключением последнего число.
     # ----------
     # In the try block, using a for loop, we try to iterate over all the elements of the list "search_list"
     # and place them in the list "upper_bound_error_list" using the method "append".
+    # The function "range()" returns a sequence of numbers excluding the last number.
     try:
         for i in range(low, high+1):
             upper_bound_error_list.append(search_list[i])
     # В блоке except пытаемся перехватить ошибку "IndexError", в случае если
-    # мы попытались поместить в список "upper_bound_error_list" элемент,
+    # мы пытаемся поместить в список "upper_bound_error_list" элемент,
     # который имеет индекс больший максимального индекса в списке "search_list"
     # или который имеет индекс меньший минимального индекса в списке "search_list".
     # Если мы успешно перехватываем ошибку "IndexError", то выводится сообщение об ошибке и
@@ -40,7 +42,7 @@ def binary_search(search_list, low, high, element):
     # Функция "print()" выводит некую указанную информацию на экран или на какое-либо другое устройство вывода.
     # ----------
     # In the except block we try to catch th error "IndexError",
-    # if we tried to place in the list "upper_bound_error_list" the element, that has the index greater
+    # if we try to place in the list "upper_bound_error_list" the element, that has the index greater
     # than the maximum index of the list "search_list",
     # or that has the index less than the minimum index of the list "search_list".
     # If we successfully catch the error "IndexError", then the error message is displayed
@@ -48,14 +50,14 @@ def binary_search(search_list, low, high, element):
     # The keyword "return" is to exit a function and return a value.
     # The function "print()" prints the specified message to the screen, or other standard output device.
     except IndexError:
-        return print("Указанная верхняя граница превышает действительную верхнюю границу списка "
-                     "или указанная нижняя граница меньше действительной нижней границы списка \n"
+        return print("The specified upper bound is greater than the actual upper bound of the list "
+                     "or the specified lower bound is less than the actual lower bound of the list \n"
                      "----------")
     # Если указанная нижняя граница меньше или равна указанной верхней границе,
     # а также эта нижняя граница больше или равна 0,
     # то находим индекс среднего элемента списка "search_list".
-    # Переменная "mid" содержит этот индекс среднего элемента.
-    # Индекс среднего элемента списка "search_list" округляется в меньшую сторону.
+    # Переменная "mid" хранит этот индекс среднего элемента.
+    # Значение переменной "mid" округляется в меньшую сторону.
     # ----------
     # if the specified lower bound is less than or equal to the specified upper bound
     # and this lower bound is greater than or equal to 0,
@@ -65,45 +67,45 @@ def binary_search(search_list, low, high, element):
     if high >= low >= 0:
         mid = low + (high - low) // 2
         # Создаем базовый случай.
-        # Базовый случай в рекурсивной функции - это часть кода функции, в которой описывается
+        # Базовый случай в рекурсивной функции - это часть функции, в которой описывается
         # условие прекращения работы функции в целях предотвращения зацикливания.
         # Если значение среднего элемента списка "search_list" равно числу, которое мы ищем,
         # или же если список "search_list" содержит 1 элемент и этот элемент равен числу, которое мы ищем,
         # то функция "binary_search" возвращает индекс этого среднего элемента.
         # ----------
         # Create the base case.
-        # The base case in a recursive function is a part of the function code that describes
-        # the condition for the termination of the function in order to prevent loops.
+        # Base case in a recursive function is a part of a function that describes
+        # a condition for termination of the function in order to prevent loops.
         # If the value of the middle element of the list "search_list" is equal to the number to find,
         # or if the list "search_list" contains 1 element and this element is equal to the number to find,
         # then the function "binary_search" returns the index of this middle element.
         if search_list[mid] == element:
-            return print("Искомый элемент находится под индексом %d \n"
+            return print("The element we are looking for is at index %d \n"
                          "----------" % mid)
         # Создаем рекурсивный случай.
-        # Рекурсивный случай в рекурсивной функции - это часть кода функции, в которой функция вызывает сама себя
+        # Рекурсивный случай в рекурсивной функции - это часть функции, в которой функция вызывает сама себя
         # в целях выполнения какой-либо задачи.
         # Если значение среднего элемента списка "search_list" больше числа, которого мы ищем,
-        # то рекурсивно вызывается копия функции "binary_search", в которой
+        # то рекурсивно вызывается новая копия функции "binary_search", в которой
         # верхняя граница области поиска становится равной на одну позицию меньше,
         # чем индекс этого среднего элемента.
         # ----------
         # Create the recursive case.
-        # The recursive case in a recursive function is a part of the function code
-        # in which the function calls itself in order to perform a task.
+        # Recursive case in a recursive function is a part of a function
+        # in which the function calls itself in order to perform some task.
         # If the value of the middle element of the list "search_list" is greater than the number to find,
-        # then the copy of the function "binary_search" is recursively called,
+        # then a new copy of the function "binary_search" is recursively called,
         # in which the upper bound of the search area is one position less
         # than the index of this middle element.
         elif search_list[mid] > element:
             return binary_search(search_list, low, mid - 1, element)
         # Иначе если значение среднего элемента списка "search_list" меньше числа, которого мы ищем,
-        # то рекурсивно вызывается копия функции "binary_search", в которой
+        # то рекурсивно вызывается новая копия функции "binary_search", в которой
         # нижняя граница области поиска становится равной на одну позицию больше,
         # чем индекс этого среднего элемента.
         # ----------
         # Otherwise, if the value of the middle element of the list "search_list" is less than the number to find,
-        # then the copy of the function "binary_search" is recursively called,
+        # then a new copy of the function "binary_search" is recursively called,
         # in which the lower bound of the search area is one position greater
         # than the index of this middle element.
         else:
@@ -120,9 +122,9 @@ def binary_search(search_list, low, high, element):
     # or if the specified upper bound is greater than the actual upper bound of the list "search_list",
     # then the function "binary_search" displays the corresponding error message.
     else:
-        return print("Искомого элемента нет в списке или "
-                     "указанная верхняя граница превышает действительную верхнюю границу списка "
-                     "или указанная нижняя граница меньше действительной нижней границы списка \n"
+        return print("The element we are looking for is not in the list or "
+                     "the specified upper bound is greater than the actual upper bound of the list "
+                     "or the specified lower bound is less than the actual lower bound of the list \n"
                      "----------")
     # В этой функции "binary_search" не учтено условие, когда указанные границы области поиска образуют список, который
     # входит в список "search_list", но является меньше списка "search_list".
@@ -158,53 +160,60 @@ y = 4
 # ----------
 # Try to call the function "binary_search" with different sets of parameters.
 
+
 # Все параметры указаны верно.
+# Функция "len()" возвращает количество элементов в списке.
 # ----------
-# All specified parameters are correct.
+# All the specified parameters are correct.
+# The function "len()" returns the number of elements in a list.
 binary_search(my_list, 0, len(my_list) - 1, x)
+
 
 # Нижняя граница указана неверно.
 # ----------
 # The specified lower bound is not correct.
 binary_search(my_list, -1, len(my_list) - 1, x)
 
+
 # Нижняя граница указана неверно.
 # ----------
 # The specified lower bound is not correct.
 binary_search(my_list, -7, len(my_list) - 1, x)
+
 
 # Верхняя граница указана неверно.
 # ----------
 # The specified upper bound is not correct.
 binary_search(my_list, 0, 6, x)
 
+
 # Верхняя граница указана неверно.
 # ----------
 # The specified upper bound is not correct.
 binary_search(my_list, 0, -1, x)
+
 
 # Верхняя граница указана неверно.
 # ----------
 # The specified upper bound is not correct.
 binary_search(my_list, 0, -8, x)
 
-# Нижняя граница больше верхней границы.
+
+# Указанная нижняя граница больше указанной верхней границы.
 # ----------
 # The specified lower bound is greater than the specified upper bound.
 binary_search(my_list, 3, 2, x)
+
 
 # Число, которое нужно найти, указано неверно.
 # ----------
 # The specified number to find is not correct.
 binary_search(my_list, 0, len(my_list) - 1, y)
 
-# Указанные границы образуют образуют список,
+
+# Указанные границы образуют список,
 # который входит в список "search_list", но является меньше списка "search_list".
-# Обратите внимание на то, что программа в данном случае попытается найти число,
-# поскольку данный тип наборов параметров не учтен в этой программе.
 # ----------
 # The specified bounds form the list
 # that is included in the list "search_list", but is less than the list "search_list".
-# Note that in this case the program tries to find the number,
-# since this type of the parameter sets is not taken into account in this program.
 binary_search(my_list, 1, 4, x)
