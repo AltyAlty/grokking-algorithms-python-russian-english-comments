@@ -20,7 +20,7 @@ This repository contains solutions to problems written in Python for the book "G
 13. Dijkstra's algorithm using hash tables (dictionaries).
 14. Greedy algorithms using sets and hash tables (dictionaries).
 
-## If you have found any bugs or mistakes in the code or in the comments, I will be glad if you report them.
+If you have found any bugs or mistakes in the code or in the comments, I will be glad if you report them.
 
 
 Этот репозиторий содержит решения задач на языке Python из книги "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
@@ -44,4 +44,4 @@ This repository contains solutions to problems written in Python for the book "G
 14. Жадный алгоритм, используя множества и хеш-таблицы (словари).
 
 
-## Если вы нашли какие-либо ошибки в коде или в комментариях, буду рад, если вы сообщите о них.
+Если вы нашли какие-либо ошибки в коде или в комментариях, буду рад, если вы сообщите о них.
