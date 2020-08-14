@@ -18,7 +18,7 @@ This repository contains solutions to problems written in Python for the book "G
 11. Voting using hash tables (dictionaries).
 12. Breadth-first search using hash tables (dictionaries) and deques.
 13. Dijkstra's algorithm using hash tables (dictionaries).
-14. Greedy algorithms using sets and hash tables (dictionaries).
+14. Greedy algorithm using sets and hash tables (dictionaries).
 
 ###### If you have found any bugs or mistakes in the code or in the comments, I will be glad if you report them.
 

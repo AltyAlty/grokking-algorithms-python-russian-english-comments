@@ -1,7 +1,7 @@
 # Жадный алгоритм, используя множества и хеш-таблицы (словари).
 # Здесь нам нужно найти набор радиостанций для покрытия определенного количество штатов, используя жадный алгоритм.
 # ----------
-# Greedy algorithms using sets and hash tables (dictionaries).
+# Greedy algorithm using sets and hash tables (dictionaries).
 # Here we need to find a set of radio stations to cover a certain number of states using a greedy algorithm.
 
 
