@@ -1,8 +1,10 @@
 # Алгоритм Дейкстры, используя хеш-таблицы (словари).
+# [O(E*log V); V - количество вершин графа, E - количество ребер графа]
 # Здесь нам нужно найти все кратчайшие пути от начального узла до всех остальных узлов
 # в направленном ациклическом взвешенном графе.
 # ----------
 # Dijkstra's algorithm using hash tables (dictionaries).
+# [O(E*log V)); V - the number of vertices in a graph, E - the number of edges in a graph]
 # Here we need to find all the shortest paths from a start node to all other nodes
 # in a directed acyclic weighted graph.
 

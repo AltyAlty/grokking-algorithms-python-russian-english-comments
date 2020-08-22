@@ -1,8 +1,10 @@
 # Поиск в ширину, используя хеш-таблицы (словари) и двусторонние очереди.
+# [O(V+E); V - количество вершин графа, E - количество ребер графа]
 # Здесь нам нужно найти продавца манго среди друзей и друзей друзей персонажа.
 # Здесь мы можем рассмотреть работу очереди.
 # ----------
 # Breadth-first search using hash tables (dictionaries) and deques.
+# [O(V+E); V - the number of vertices in a graph, E - the number of edges in a graph]
 # Here we need to find a mango seller among the friends and the friends of friends of a character.
 # Here we can see how deque works.
 

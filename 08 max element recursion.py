@@ -1,6 +1,6 @@
-# Поиск наибольшего элемента, используя рекурсию.
+# Поиск наибольшего элемента, используя рекурсию. [O(n)]
 # ----------
-# Finding the greatest element using recursion.
+# Finding the greatest element using recursion. [O(n)]
 
 
 # Создаем функцию "find_max_one", которая принимает один входной параметр:

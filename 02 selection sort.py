@@ -1,9 +1,9 @@
-# Сортировка выбором.
+# Сортировка выбором. [O(n*n)]
 # Здесь мы создаем две функции:
 # первая функция находит наименьший элемент в списке,
 # а вторая функция сортирует список путем сравнения каждого элемента списка с наименьшим элементом.
 # ----------
-# Selection sort.
+# Selection sort. [O(n*n)]
 # Here we create two functions:
 # the first function finds the smallest element in a list,
 # and the second function sorts the list by comparing each element in the list with the smallest element.

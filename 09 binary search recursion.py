@@ -1,6 +1,6 @@
-# Бинарный поиск, используя рекурсию.
+# Бинарный поиск, используя рекурсию. [O(log n)]
 # ----------
-# Binary search using recursion.
+# Binary search using recursion. [O(log n)]
 
 
 # Создаем функцию "binary_search", которая принимает 4 входных параметра:
