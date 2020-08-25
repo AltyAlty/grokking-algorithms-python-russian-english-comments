@@ -1,6 +1,6 @@
 # Grokking Algorithms / Грокаем Алгоритмы
 
-This repository contains solutions to problems and algorithms written in Python for the book "Grokking Algorithms" by Aditya Bhargava with Russian and English comments.
+This repository contains the examples and algorithms written in Python for the book "Grokking Algorithms" by Aditya Bhargava with Russian and English comments.
 
 
 ## Contents
@@ -23,7 +23,7 @@ This repository contains solutions to problems and algorithms written in Python 
 ###### If you have found any bugs or mistakes in the code or in the comments, I will be glad if you report them.
 
 ----
-Этот репозиторий содержит решения задач и алгоритмы на языке Python из книги "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
+Этот репозиторий содержит примеры кода и алгоритмы на языке Python из книги "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
 
 
 ## Содержание
