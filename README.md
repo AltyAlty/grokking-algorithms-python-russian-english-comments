@@ -20,8 +20,6 @@ This repository contains the examples and algorithms written in Python for the b
 13. Dijkstra's algorithm using hash tables (dictionaries).
 14. Greedy algorithm using sets and hash tables (dictionaries).
 
-###### If you have found any bugs or mistakes in the code or in the comments, I will be glad if you report them.
-
 ----
 Этот репозиторий содержит примеры кода и алгоритмы на языке Python из книги "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
 
@@ -42,5 +40,3 @@ This repository contains the examples and algorithms written in Python for the b
 12. Поиск в ширину, используя хеш-таблицы (словари) и двусторонние очереди.
 13. Алгоритм Дейкстры, используя хеш-таблицы (словари).
 14. Жадный алгоритм, используя множества и хеш-таблицы (словари).
-
-###### Если вы нашли какие-либо ошибки в коде или в комментариях, буду рад, если вы сообщите о них.
